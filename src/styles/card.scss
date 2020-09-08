@@ -3,7 +3,7 @@
   flex-direction: column;
   width: 200px;
   height: 403px;
-  padding: 0 14px;
+  padding: 15px  14px;
 
   font-family: $major-font;
 
@@ -21,16 +21,24 @@
   }
 
   &__picture {
-    width: 160px;
-    height: 134px;
-    margin-top: 30px;
-    margin-left: 5px;
+    width: 164px;
+    height: 158px;
+    margin-top: 3px;
+    margin-left: 3px;
+    padding: 12px 2px;
+
+    transition: outline 1s, transform 1s;
+
+    &:hover {
+      outline: 3px solid #f3f3f3;
+      transform: scale(1.2);
+    }
   }
 
   &__name {
     width: 170px;
     height: 31px;
-    margin-top: 45px;
+    margin-top: 33px;
 
     font-size: $font-size + 1px;
     font-weight: 500;
@@ -84,6 +92,8 @@
     border: 1px solid $active-color;
     border-radius: $border-radius;
 
+    transition: background-color 1s, color 1s;
+    
     &:hover {
       background-color: $background-color;
       color: $active-color;
