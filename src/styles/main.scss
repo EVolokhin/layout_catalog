@@ -7,12 +7,14 @@
 @import "stars.scss";
 
 .main {
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 40px;
-  max-width: $main-width;
+  display: grid;
 
-  @media screen and (min-width: $main-width) {
-    padding-left: 128px;
+  grid-template-columns: repeat(4, 200px);
+  justify-content: center;
+  column-gap: 48px;
+  row-gap: 50px;
+  
+  @media screen and (max-width: 1190px) {
+    grid-template-columns: repeat(auto-fit, 200px);
   }
 }
